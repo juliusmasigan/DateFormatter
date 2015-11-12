@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Date Formatter</title>
+	</head>
+
+	<body>
+		<div class="date_class">OCTOBER 20, 2015</div>
+
+		<!-- Import Jquery -->
+		<script src="../node_modules/jquery/dist/jquery.min.js" type="application/javascript"></script>
+		<!-- Import Date-Formatter -->
+		<script src="../dist/date-formatter.js" type="application/javascript"></script>
+
+
+		<script type="application/javascript">
+			$(function() {
+				$('.date_class').dateFormat('mm.dd.yy');
+			});
+		</script>
+	</body>
+<html>
