@@ -16,13 +16,24 @@ $.fn.extend({
 			year = year[0];
 
 			switch(format) {
-				case 'mm.dd.yy':
+				case 'mm.dd.yyyy':
 					monthLower = month.toLowerCase();
                     monthIndex = String(monthMap.indexOf(monthLower) + 1);
                     monthPadded = "00".substring(0, 2 - monthIndex.length) + monthIndex;
                     datePadded = "00".substring(0, 2 - ddate.length) + ddate;
 
                     dateFormated = monthPadded+"."+datePadded+"."+year;
+                    $(v).text(dateFormated);
+					break;
+				case 'mm.dd.yy':
+					monthLower = month.toLowerCase();
+                    monthIndex = String(monthMap.indexOf(monthLower) + 1);
+                    monthPadded = "00".substring(0, 2 - monthIndex.length) + monthIndex;
+                    datePadded = "00".substring(0, 2 - ddate.length) + ddate;
+                    yearPadded = year.substring(2, 4);
+
+
+                    dateFormated = monthPadded+"."+datePadded+"."+yearPadded;
                     $(v).text(dateFormated);
 					break;
 			}
